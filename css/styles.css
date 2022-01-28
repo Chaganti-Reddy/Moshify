@@ -1,88 +1,119 @@
-:root{
-    --color-primary: #2584ff ;
-    --color-secondary: #00d9ff ;
-    --color-accent: #ff3400 ;
-    --color-headings: #1b0767 ;
-    --color-body: #918ca4 ;
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0767;
+  --color-body: #918ca4;
 }
 
 /* Typography */
 html {
-    /* 62.5% of 16px = 10px */
-    font-size:62.5% ;
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
 }
 
 body {
-    font-family: Inter, Arial, Helvetica, sans-serif ;
-    font-size: 2.4rem ;
-    line-height: 1.5;
-    color:var(--color-body) ;
- 
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--color-body);
 }
 
-h1,h2,h3{
-    color:var(--color-headings) ;
-     margin-bottom: 1rem;
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
 }
 
-h1 
-{
-    /* 7 times the font size of html element */
-    font-size: 7rem;
+h1 {
+  /* 7 times the font size of html element */
+  font-size: 7rem;
 }
 
-h2{
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
     font-size: 4rem;
-}
-h3{
-    font-size: 3rem;
-}
-
-p{
-    margin-top: 0;
-}
-
-@media screen and (min-width: 1024px){
-    body {
-        font-size: 1.8rem;
-    }
-    h1{
-        font-size: 8rem;
-    }
-    h2{
-        font-size: 4rem ;
-    }
-    h3{
-        font: size 2.4re;
-    }
+  }
+  h3 {
+    font: size 2.4re;
+  }
 }
 
 /* Links */
 
-a{
-    text-decoration: none ;
+a {
+  text-decoration: none;
 }
 
-.link-arrow{
-    color: var(--color-accent) ;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: bold ;
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.link-arrow::after{
-    content : "-->" ;
-    margin-left: 5px ;
-    transition: margin 0.15s;
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
 }
 
-.link-arrow:hover::after{
-    margin-left:10px ;
+.link-arrow:hover::after {
+  margin-left: 10px;
 }
 
-@media screen and (min-width: 1024px)
-{
-    .link-arrow{
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* Badges */
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+}
+
+.badge--primary{
+    background: var(--color-primary);
+    color: #fff ;
+}
+
+.badge--secondary{
+    background: var(var(--color-secondary));
+}
+
+.badge--small{
+    font-size : 1.6rem ;
+}
+
+@media screen and (max-width: 1024px){
+    .badge{
         font-size: 1.5rem ;
+    }
+    .badge--small{
+        font-size: 1.2rem ;
     }
 }
